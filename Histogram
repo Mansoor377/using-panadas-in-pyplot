@@ -1,0 +1,10 @@
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas
+
+np.random.seed(0)
+df = pandas.DataFrame(np.random.normal(size=(37,2)), columns=['A', 'B'])
+
+df['A'].hist()
+df['B'].hist()
