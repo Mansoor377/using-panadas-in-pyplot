@@ -1,10 +1,16 @@
-%matplotlib inline
-import numpy as np
 import matplotlib.pyplot as plt
-import pandas
+import numpy as np
 
-np.random.seed(0)
-df = pandas.DataFrame(np.random.normal(size=(37,2)), columns=['A', 'B'])
+# Generate random data for the histogram
+data = np.random.randn(1000)
 
-df['A'].hist()
-df['B'].hist()
+# Plotting a basic histogram
+plt.hist(data, bins=30, color='skyblue', edgecolor='black')
+
+# Adding labels and title
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.title('Basic Histogram')
+
+# Display the plot
+plt.show()
